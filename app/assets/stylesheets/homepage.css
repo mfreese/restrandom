@@ -1,9 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
 .testRed {
   background-color: red;
   height: 100vh;
 }
 
-.testImage {
-  background: url("../img/testImage.jpg");
+.liCenter {
+  text-align: center;
+}
+
+.liFont {
+  font-size: 100px;
+}
+
+.liGrad {
+  background: linear-gradient(rgba(202, 223, 147, 0.75), rgba(138, 119, 38, 0.75));
+}
+
+.liImage {
+  background-image: linear-gradient(rgba(202, 223, 147, 0.5), rgba(138, 119, 38, 0.5)), url("../img/testImage.jpg");
   height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.liLogo {
+  height: 40px;
+  width: 40px;
+}
+
+.liWhiteAndShadow {
+  color: white;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
 }

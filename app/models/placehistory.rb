@@ -1,0 +1,2 @@
+class Placehistory < ApplicationRecord
+end
