@@ -14,12 +14,12 @@ Rails.application.routes.draw do
     post '/users' => 'users/registrations#create', as: :sign_up, constraints: {format: /(json)/}
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-root 'homepage#static'
-get '/choice' => 'choice#choice'
-get '/criteria' => 'criteria#criteria'
-get '/selection' => 'selection#selection'
-get '/pastplaces' => 'pastplaces#pastplaces'
-get '/placehistory' => 'placehistory#placehistory'
+    root 'homepage#static'
+    get '/choice' => 'homepage#static'
+    get '/criteria' => 'homepage#static'
+    get '/selection' => 'homepage#static'
+    get '/pastplaces' => 'homepage#static'
+    get '/placehistory' => 'homepage#static'
 
 
 end

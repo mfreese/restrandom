@@ -1,17 +1,44 @@
-<h2>Sign up</h2>
+<div class="container-fluid">
+    <div class="row suGrad">
+        <div class="col-sm-8 suImage">
+            <div>
+                <img src="../img/logoTest2.svg" alt="Logo" class="suLogo center-block">
+                <h1 class="suWhiteAndShadow suCenter suFont">Restaurant</h1>
+                <h1 class="suWhiteAndShadow suCenter suFont">Randomizer</h1>
+            </div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <div>
+                <h1 class="suWhiteAndShadow suCenter">You've made the first step to deciding.</h1>
+            </div>
+        </div>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
+        <div class="col-sm-4 suCenter suWhiteAndShadow">
+            <h2>Sign Up</h2>
+            <br />
+            <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+              <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :email, required: true, autofocus: true %>
-    <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
-    <%= f.input :password_confirmation, required: true %>
-  </div>
+              <div class="form-inputs">
+                    <h3>Email</h3>
+                <%= f.input :email, required: true, autofocus: true, label: false, placeholder: 'yourname@mail.com' %>
+                    <h3>Password</h3>
+                <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), label: false, placeholder: 'Notpassword' %>
+                    <h3>Password Again</h3>
+                <%= f.input :password_confirmation, required: true, label: false, placeholder: 'Notpassword' %>
+              </div>
+              <br />
+              <br />
+              <div class="form-actions">
+                <%= f.button :submit, "Sign up" %>
+              </div>
+            <% end %>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+            <%= render "devise/shared/links" %>
+        </div>
+    </div>
+</div>
