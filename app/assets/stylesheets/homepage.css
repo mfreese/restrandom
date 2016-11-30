@@ -1,0 +1,9 @@
+.testRed {
+  background-color: red;
+  height: 100vh;
+}
+
+.testImage {
+  background: url("../img/testImage.jpg");
+  height: 100vh;
+}
