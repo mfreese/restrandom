@@ -1,0 +1,2 @@
+class Pastplace < ApplicationRecord
+end
