@@ -1,9 +1,7 @@
 class Api::CriteriaController < ApplicationController
-
 def create
-
-
 end
+
 
 def search
   parameters = { term: params[:term], limit: 16 }
