@@ -1,4 +1,4 @@
-class CriteriaController < ApplicationController
+class Api::CriteriaController < ApplicationController
 
 def create
 

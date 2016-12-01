@@ -4,4 +4,8 @@ class ApplicationController < ActionController::Base
 
   # acts_as_token_authentication_handler_for User
   acts_as_token_authentication_handler_for User, if: lambda { |controller| controller.request.format.json? }
+
+  def static
+
+  end
 end
