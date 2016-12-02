@@ -1,4 +1,6 @@
 import React from 'react'
+// import { sharedState, attachSharedState, detachSharedState } from 'react-helpers/dist/sharedState'
+// import { browserHistory } from 'react-router'
 // import classAutoBind from 'react-helpers/dist/classAutoBind'
 
 class Criteria extends React.Component {
@@ -11,8 +13,6 @@ class Criteria extends React.Component {
 
     // componentDidMount() {
     //     attachSharedState(this)
-    //
-    //     this.getCritera()
     // }
     //
     // componentWillUnmount() {
@@ -33,7 +33,20 @@ class Criteria extends React.Component {
             <div className="row critTopGrad">
                 {/* <!-- Top picture --> */}
                 <div className="col-sm-9 critImage">
-
+                    <div className="critWhiteAndShadow">
+                        <img src="../img/logoTest2.svg" alt="Logo" className="suLogo center-block"/>
+                        <h1>Restaurant Randomizer</h1>
+                    </div>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <div className="critWhiteAndShadow">
+                        <h3>Here is where the rules will be placed.</h3>
+                    </div>
                 </div>
                 <div className="col-sm-3 critCenter">
                     <h3 className="critWhiteAndShadow">Invite People</h3>
@@ -47,8 +60,6 @@ class Criteria extends React.Component {
                     <input type="email" className="form-control" id="Email4" placeholder="Email Invite 4" />
                     <label htmlFor="Email1"></label>
                     <input type="email" className="form-control" id="Email5" placeholder="Email Invite 5" />
-                    <br />
-                    <button className="btn btn-default center-block" type="submit">Submit</button>
                 </div>
             </div>
             <div className="row critBottomGrad">
