@@ -17,23 +17,23 @@
             </div>
         </div>
 
-        <div class="col-sm-4 suCenter suWhiteAndShadow">
-            <h2>Sign Up</h2>
+        <div class="col-sm-4 suCenter">
+            <h2 class="suWhiteAndShadow">Sign Up</h2>
             <br />
             <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
               <%= f.error_notification %>
 
               <div class="form-inputs">
-                    <h3>Email</h3>
+                    <h3 class="suWhiteAndShadow">Email</h3>
                 <%= f.input :email, required: true, autofocus: true, label: false, placeholder: 'yourname@mail.com' %>
-                    <h3>Password</h3>
+                    <h3 class="suWhiteAndShadow">Password</h3>
                 <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), label: false, placeholder: 'Notpassword' %>
-                    <h3>Password Again</h3>
+                    <h3 class="suWhiteAndShadow">Password Again</h3>
                 <%= f.input :password_confirmation, required: true, label: false, placeholder: 'Notpassword' %>
               </div>
               <br />
               <br />
-              <div class="form-actions">
+              <div class="form-actions suWhiteAndShadow">
                 <%= f.button :submit, "Sign up" %>
               </div>
             <% end %>
