@@ -19,11 +19,12 @@ Rails.application.routes.draw do
     end
 
     root 'homepage#static'
-    get '/choice' => 'application#static'
-    get '/criteria' => 'application#static'
-    get '/selection' => 'application#static'
-    get '/pastplaces' => 'application#static'
-    get '/placehistory' => 'application#static'
+    # get '/choice' => 'application#static'
+    # get '/criteria' => 'application#static'
+    # get '/selection' => 'application#static'
+    # get '/pastplaces' => 'application#static'
+    # get '/placehistory' => 'application#static'
+    get '/:whatever(/:whateverandever)' => 'application#static'
 
 
 end

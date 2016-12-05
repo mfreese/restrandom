@@ -2,11 +2,11 @@ class Users::SessionsController < Devise::SessionsController
   respond_to :json
   prepend_before_filter :require_no_authentication, :only => [:create ]
   def create
-   resource = User.find_for_database_authentication(:email=>params[:user_login][:login])
+   resource = User.find_for_database_authentication(:email=>params[:user][:email])
    if resource.nil?
      render :json=> {:success=>false, :message=>"Error with your login or password"}, :status=>401
    end
-   if resource.valid_password?(params[:user_login][:password])
+   if resource.valid_password?(params[:user][:password])
      sign_in("user", resource)
      render :json=> resource
    else
