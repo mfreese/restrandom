@@ -1,12 +1,11 @@
 import React from 'react'
 // import { sharedState, attachSharedState, detachSharedState } from 'react-helpers/dist/sharedState'
 // import { browserHistory } from 'react-router'
-// import classAutoBind from 'react-helpers/dist/classAutoBind'
+
 
 class Criteria extends React.Component {
     // constructor(props) {
     //     super(props)
-    //     classAutoBind(this)
     //     // this.state = {}
     //     this.state = sharedState()
     // }
@@ -83,7 +82,7 @@ class Criteria extends React.Component {
                     </div>
                     <div className="form-group critCenter">
                        <label htmlFor="cost">Price</label>
-                       <input type="range" min="1" max="4" defaultValue="1" className="form-control" id="cost" placeholder="Price you are willing to pay?" />
+                       <input type="range" min="1" max="4" defaultValue="1" className="form-control" id="cost" />
                      </div>
                 </div>
                 <div className="col-sm-4">
@@ -92,7 +91,7 @@ class Criteria extends React.Component {
                     </div>
                     <div className="form-group critCenter">
                        <label htmlFor="distance">Miles Away</label>
-                       <input type="range" min="1" max="10" defaultValue="1" className="form-control" id="distance" placeholder="How far are YOU willing to go?" />
+                       <input type="range" min="1" max="15" defaultValue="1" className="form-control" id="distance" />
                      </div>
                 </div>
                 <button className="btn btn-default center-block" type="submit">Find Food!</button>
