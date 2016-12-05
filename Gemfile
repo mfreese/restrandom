@@ -6,7 +6,7 @@ gem 'devise'
 gem 'geokit-rails'
 gem 'rails_admin', '~> 1.0'
 gem 'simple_form'
-gem 'sendgrid-ruby'
+gem 'sendgrid'
 gem 'simple_token_authentication', '~> 1.0'
 gem 'yelp', require: 'yelp'
 
