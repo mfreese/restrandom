@@ -31,8 +31,8 @@ img {
 }
 
 .liLogo {
-  height: 40px;
-  width: 40px;
+  height: 100px;
+  width: 100px;
 }
 
 .liWhiteAndShadow {
@@ -66,8 +66,15 @@ img {
 }
 
 .suLogo {
-  height: 40px;
-  width: 40px;
+  height: 100px;
+  width: 100px;
+}
+
+.suLogo1 {
+  height: 500px;
+  width: 500px;
+  margin-top: -170px;
+  margin-bottom: -100px;
 }
 
 .suWhiteAndShadow {
@@ -106,4 +113,29 @@ img {
 
 .critMargin {
   margin-top: 20px;
+}
+
+.decImage {
+  background-image: linear-gradient(rgba(202, 223, 147, 0.5), rgba(138, 119, 38, 0.5)), url("../img/fries.jpg");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.decWhiteAndShadow {
+  color: white;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.decCenter {
+  text-align: center;
+}
+
+.decFont {
+  font-size: 100px;
+}
+
+.decLogo {
+  height: 100px;
+  width: 100px;
 }
