@@ -3,12 +3,12 @@ source 'https://rubygems.org'
 gem "figaro"
 gem "webpack-rails"
 gem 'devise'
-gem 'geokit-rails'
 gem 'rails_admin', '~> 1.0'
 gem 'simple_form'
 gem 'sendgrid'
 gem 'simple_token_authentication', '~> 1.0'
 gem 'yelp', require: 'yelp'
+gem 'ransack'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -36,6 +36,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+
+gem 'http'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

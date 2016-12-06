@@ -9,13 +9,14 @@ Rails.application.routes.draw do
         post '/users' => 'users/registrations#create', as: :sign_up, constraints: {format: /(json)/}
     end
 
-    namespace :api do
+    scope :api do
       resources :invites
       resources :placehistories
       resources :pastplaces
       resources :choices
       resources :selections
       resources :criteria
+      post '/search' => 'geo_search#search'
     end
 
     root 'homepage#static'
