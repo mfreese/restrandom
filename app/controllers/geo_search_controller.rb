@@ -5,7 +5,7 @@ class GeoSearchController < ApplicationController
                categories: 'restaurants',
                radius: miles_to_meters(params[:radius]),
                price: params[:price],
-               location: current_user }
+               location: [:address] }
 
 
 
