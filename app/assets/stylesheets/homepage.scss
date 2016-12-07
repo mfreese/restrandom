@@ -33,7 +33,7 @@ img {
 }
 
 .liImage {
-    background-image: linear-gradient(rgba(202, 223, 147, 0.5), rgba(138, 119, 38, 0.5)), url('../img/pizza.jpg');
+    background-image: linear-gradient(rgba(202, 223, 147, 0.5), rgba(138, 119, 38, 0.5)), url('/img/pizza.jpg');
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
@@ -71,7 +71,7 @@ img {
 }
 
 .suImage {
-    background-image: linear-gradient(rgba(202, 223, 147, 0.5), rgba(138, 119, 38, 0.5)), url('../img/cook.jpg');
+    background-image: linear-gradient(rgba(202, 223, 147, 0.5), rgba(138, 119, 38, 0.5)), url('/img/cook.jpg');
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
@@ -83,10 +83,11 @@ img {
 }
 
 .suLogo1 {
-    height: 500px;
-    width: 500px;
-    margin-top: -170px;
+    height: 600px;
+    width: 600px;
+    margin-top: -190px;
     margin-bottom: -100px;
+    margin-left: 40px;
 }
 
 .suWhiteAndShadow {
@@ -102,13 +103,17 @@ img {
     background: linear-gradient(rgba(202, 223, 147, 0.75), rgba(138, 119, 38, 0.75));
 }
 
+.critFriendsGrad {
+    background: linear-gradient(rgba(138, 119, 38, 0.75), rgba(202, 223, 147, 0.75), rgba(138, 119, 38, 0.75), rgba(138, 119, 38, 0.75));
+}
+
 .critBottomGrad {
     background: linear-gradient(rgba(138, 119, 38, 0.75), rgba(202, 223, 147, 0.75), rgba(255, 255, 255, 1));
 }
 
 .critImage {
-    background-image: linear-gradient(rgba(202, 223, 147, 0.5), rgba(138, 119, 38, 0.5)), url('../img/counter2.jpg');
-    height: 326px;
+    background-image: linear-gradient(rgba(202, 223, 147, 0.5), rgba(138, 119, 38, 0.5)), url('/img/counter2.jpg');
+    height: 200px;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -128,15 +133,26 @@ img {
 }
 
 .critMargin {
-    margin-top: 20px
+    margin-top: 5px
+}
+
+.emailPad {
+    padding-top: 10px;
 }
 
 // <-- End Criteria Styles -->
 
 // <-- Decision Styles -->
 
+.desciImage {
+    background-image: linear-gradient(rgba(202, 223, 147, 0.5), rgba(138, 119, 38, 0.5)), url('/img/decision.jpg');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .decImage {
-    background-image: linear-gradient(rgba(202, 223, 147, 0.5), rgba(138, 119, 38, 0.5)), url('../img/fries.jpg');
+    background-image: linear-gradient(rgba(202, 223, 147, 0.5), rgba(138, 119, 38, 0.5)), url('/img/fries.jpg');
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
@@ -164,29 +180,4 @@ img {
 
 // <-- Test Slider Styles -->
 
-
-
-// input[type="range"] {
-//     width: 100%;
-// }
-//
-// p.rangeLabel {
-//     font-family: "Arial", sans-serif;
-//     padding: 5px;
-//     margin: 5px 0;
-//     background: rgb(136,136,136);
-//     font-size: 15px;
-//     line-height: 20px;
-// }
-//
-// p.rangeLabel:hover {
-//     background-color: rgb(3, 82, 3);
-//     color: #fff;
-//     cursor: pointer;
-// }
-//
-// p.rangeLabel.selected {
-//     background-color: rgb(8, 173, 8);
-//     color: rgb(255,255,255);
-// }
 // <-- End Test Slider Styles -->

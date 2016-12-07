@@ -74,9 +74,9 @@ class Criteria extends React.Component {
                      </div>
                 </div>
             </div>
-            <br /><br /><br /><br />
+            {/* <br /><br /><br /><br /> */}
             <button className="btn btn-success btn-lg center-block" type="button" onClick={this.sendInvites}>Send Invites!</button>
-            <br /><br /><br /><br />
+            {/* <br /><br /><br /><br /> */}
         </div>
     }
 }
