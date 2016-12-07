@@ -2,18 +2,18 @@ class Users::RegistrationsController < Devise::RegistrationsController
 before_action :configure_sign_up_params, only: [:create]
 before_action :configure_account_update_params, only: [:update]
 
-respond_to :json
-prepend_before_filter :require_no_authentication, :only => [:create ]
-def create
-  user = User.new(sign_up_params)
-  if user.save
-    render :json => user, :status=>201
-    return
-  else
-    warden.custom_failure!
-    render :json => user.errors, :status=>422
-  end
-end
+# respond_to :json
+# prepend_before_filter :require_no_authentication, :only => [:create ]
+# def create
+#   user = User.new(sign_up_params)
+#   if user.save
+#     render :json => user, :status=>201
+#     return
+#   else
+#     warden.custom_failure!
+#     render :json => user.errors, :status=>422
+#   end
+# end
 
   # GET /resource/sign_up
   # def new
@@ -53,12 +53,12 @@ end
 
   # If you have extra params to permit, append them to the sanitizer.
   def configure_sign_up_params
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:email, :password])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:email, :password, :address])
   end
 
   # If you have extra params to permit, append them to the sanitizer.
   def configure_account_update_params
-    devise_parameter_sanitizer.permit(:account_update, keys: [:email, :password])
+    devise_parameter_sanitizer.permit(:account_update, keys: [:email, :password, :address])
   end
 
   # The path used after sign up.
