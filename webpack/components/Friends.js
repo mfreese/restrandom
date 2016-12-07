@@ -8,9 +8,9 @@ class Friends extends React.Component {
             emailFields.push(<div className="col-sm-3" key={i}><input type="email" className="form-control" placeholder={"Email Invite " + (i+1)} onChange={this.props.addEmail} data-id={i}/></div>)
         }
 
-        return <div className="row critTopGrad">
+        return <div className="row critFriendsGrad emailPad">
             <div className="col-sm-12">
-                <h3 className="critWhiteAndShadow">Invite People</h3>
+                {/* <h3 className="critWhiteAndShadow">Invite People</h3> */}
                 <div className="row">
                     {emailFields}
                 </div>

@@ -1,15 +1,24 @@
 <div class="container-fluid">
     <div class="row critTopGrad">
-        <div class="col-sm-9 decImage">
-            <img src="../img/logo1.svg" alt="Logo" class="decLogo center-block">
+        <div class="col-sm-9 desciImage">
+            <img src="/img/logo1.svg" alt="Logo" class="decLogo center-block">
             <h1 class="decWhiteAndShadow decCenter decFont">Restaurant</h1>
             <h1 class="decWhiteAndShadow decCenter decFont">Randomizer...</h1>
-            </br/>
-            </br/>
-            <h1 class="decWhiteAndShadow decCenter">Email has been sent!</h1>
+            <br/>
+            <br/>
+            <h1 class="decWhiteAndShadow decCenter">Emails have been sent!</h1>
+            <br/>
+            <div class="row">
+                <div class="col-sm-6">
+                    <button class="btn btn-success btn-lg center-block" type="button" onClick={this.sendInvites}>Accept!</button>
+                </div>
+                <div class="col-sm-6">
+                    <button class="btn btn-danger btn-lg center-block" type="button" onClick={this.sendInvites}>Reject!</button>
+                </div>
+            </div>
         </div>
         <div class="col-sm-3">
-            <h1 class="decWhiteAndShadow decCenter">Decision Made!</h1>
+            <h1 class="decWhiteAndShadow decCenter">Decision Time!</h1>
             <br />
             <h3 class="decWhiteAndShadow decCenter">Check your email for which restaurant was picked.</h3>
             <h3 class="decWhiteAndShadow decCenter">If the restaurante that was picked is not the liking of someone in your party, never fear. You or someone in your party can reject the choice.</h3>
