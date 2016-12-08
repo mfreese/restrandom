@@ -17,6 +17,7 @@ Rails.application.routes.draw do
       resources :selections
       resources :criteria
       post '/search' => 'geo_search#search'
+      post 'users/invite' => 'invites#invites'
     end
 
     root 'homepage#static'
