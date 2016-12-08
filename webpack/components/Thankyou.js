@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Thankyou = (props) => <div className="container-fluid">
+const Thankyou = (props) => <div>
     <div className="row critTopGrad">
         <div className="col-sm-9 decImage">
             <img src="/img/logo1.svg" alt="Logo" className="decLogo center-block"/>

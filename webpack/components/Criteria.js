@@ -32,7 +32,7 @@ class Criteria extends React.Component {
 
         if (this.state.friends.length) {
             return (
-                fetch(),
+                fetch()
                 // alert('You have an email address')
             );
         } else {
