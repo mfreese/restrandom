@@ -1,4 +1,4 @@
-class UserNotifier < ActionMailer::Base
+class UserNotifierMailer < ActionMailer::Base
   default :from => 'Team@RestaurantRandomizer.com'
 
   # send a signup email to the user, pass in the user object that   contains the user's email address
@@ -7,4 +7,6 @@ class UserNotifier < ActionMailer::Base
     mail( :to => @user.email,
     :subject => 'Thanks for signing up for our amazing app' )
   end
+
+
 end

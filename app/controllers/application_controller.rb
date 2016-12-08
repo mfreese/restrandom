@@ -8,4 +8,12 @@ class ApplicationController < ActionController::Base
   def static
 
   end
+
+  def current_user
+    if Rails.env == 'development'
+      User.first  
+    else
+      super
+    end
+  end
 end
