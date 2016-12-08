@@ -1,29 +1,25 @@
 import React from 'react'
+import { Link } from 'react-router'
 
 class Decision extends React.Component {
     sendInvites() {
-        
-        fetch('/api/invites', {
-            method: 'POST',
-            credentials: 'same-origin',
-            body: JSON.stringify(this.state),
-            headers: {
-                'content-type': 'application/json'
-            }
-        })
-        .then(response => response.json())
-        .then(response => browserHistory.push('/thankyou'))
+        console.log(this.state)
+        // fetch('/api/invites', {
+        //     method: 'POST',
+        //     credentials: 'same-origin',
+        //     body: JSON.stringify(this.state),
+        //     headers: {
+        //         'content-type': 'application/json'
+        //     }
+        // })
+        // .then(response => response.json())
+        // .then(response => browserHistory.push('/thankyou'))
 
     }
 
     render() {
-        const emailFields = []
 
-        for (let i = 0; i < 4; i++) {
-            emailFields.push(<div className="col-sm-3" key={i}><input type="email" className="form-control" placeholder={"Email Invite " + (i+1)} onChange={this.props.addEmail} data-id={i}/></div>)
-        }
-
-        return <div className="container-fluid">
+        return <div>
             <div className="row critTopGrad">
                 <div className="col-sm-9 desciImage">
                     <img src="/img/logo1.svg" alt="Logo" className="decLogo center-block"/>
@@ -35,7 +31,9 @@ class Decision extends React.Component {
                     <br/>
                     <div className="row">
                         <div className="col-sm-6">
-                            <button className="btn btn-success btn-lg center-block" type="button" onClick={this.sendInvites}>Accept!</button>
+                            <Link to='/thankyou'>
+                                <button className="btn btn-success btn-lg center-block" type="button">Accept!</button>
+                            </Link>
                         </div>
                         <div className="col-sm-6">
                             <button className="btn btn-danger btn-lg center-block" type="button" onClick={this.sendInvites}>Reject!</button>
