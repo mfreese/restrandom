@@ -9,11 +9,14 @@ class ApplicationController < ActionController::Base
 
   end
 
+  def invite_preview
+      render template: 'application/invite', layout: false
+  end
+
   def current_user
     if Rails.env == 'development'
-      User.first  
+      User.first
     else
       super
     end
-  end
 end

@@ -24,6 +24,23 @@ class Criteria extends React.Component {
     }
 
     sendInvites() {
+        // validation goes here
+        // check that this.state.friends.length is greater than 0
+        // if it is then run fetch, if it is not then show error message alert()
+
+        // var emailVar = document.getElementById('emailNumber0').value
+
+        if (this.state.friends.length) {
+            return (
+                fetch(),
+                // alert('You have an email address')
+            );
+        } else {
+            return (
+                alert('You need 1 email address')
+            );
+        }
+
         fetch('/api/invites', {
             method: 'POST',
             credentials: 'same-origin',
@@ -49,7 +66,7 @@ class Criteria extends React.Component {
                     <div className="form-group critCenter">
                         <label htmlFor="type">Type</label>
                         <select className="form-control" id="type" onChange={(e) => this.setState({type:e.target.value})} value={this.state.type}>
-                            <option value="BU">Burgers</option>
+                            <option value="AM">American</option>
                             <option value="PI">Pizza</option>
                             <option value="ME">Mexican</option>
                         </select>
@@ -74,8 +91,16 @@ class Criteria extends React.Component {
                      </div>
                 </div>
             </div>
+            <div className="row">
+                <div className="col-sm-8">
+                    <button className="btn btn-success btn-lg center-block" type="button" onClick={this.sendInvites}>Send Invites!</button>
+                </div>
+                <div className="col-sm-4">
+                    <form className="button_to" method="post" action="/users/sign_out"><input type="hidden" name="_method" value="delete" /><input className="btn btn-lg btn-danger" type="submit" value="Log Out!" /></form>
+                </div>
+            </div>
             {/* <br /><br /><br /><br /> */}
-            <button className="btn btn-success btn-lg center-block" type="button" onClick={this.sendInvites}>Send Invites!</button>
+            {/* <button className="btn btn-success btn-lg center-block" type="button" onClick={this.sendInvites}>Send Invites!</button> */}
             {/* <br /><br /><br /><br /> */}
         </div>
     }

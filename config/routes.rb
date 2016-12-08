@@ -21,6 +21,7 @@ Rails.application.routes.draw do
     end
 
     root 'homepage#static'
+    get '/invite_preview' => 'application#invite_preview'
     # get '/choice' => 'application#static'
     # get '/criteria' => 'application#static'
     # get '/selection' => 'application#static'

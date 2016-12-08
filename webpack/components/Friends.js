@@ -5,7 +5,7 @@ class Friends extends React.Component {
         const emailFields = []
 
         for (let i = 0; i < 4; i++) {
-            emailFields.push(<div className="col-sm-3" key={i}><input type="email" className="form-control" placeholder={"Email Invite " + (i+1)} onChange={this.props.addEmail} data-id={i}/></div>)
+            emailFields.push(<div className="col-sm-3" key={i}><input type="email" className="form-control" placeholder={"Email Invite " + (i+1)} onChange={this.props.addEmail} data-id={i} id={"emailNumber" + (i)}/></div>)
         }
 
         return <div className="row critFriendsGrad emailPad">
