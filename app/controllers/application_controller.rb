@@ -8,4 +8,8 @@ class ApplicationController < ActionController::Base
   def static
 
   end
+
+  def invite_preview
+      render template: 'application/invite', layout: false
+  end
 end

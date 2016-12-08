@@ -8,7 +8,7 @@ const Thankyou = (props) => <div className="container-fluid">
             <h1 className="decWhiteAndShadow decCenter decFont">Randomizer...</h1>
             <br/>
             <br/>
-            <h1 className="decWhiteAndShadow decCenter">Email has been sent!</h1>
+            <h1 className="decWhiteAndShadow decCenter">Choice has been made!</h1>
         </div>
         <div className="col-sm-3">
             <h1 className="decWhiteAndShadow decCenter">Decision Made!</h1>
