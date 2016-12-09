@@ -30,13 +30,16 @@ class Decision extends React.Component {
                     <h1 className="decWhiteAndShadow decCenter">Emails have been sent!</h1>
                     <br/>
                     <div className="row">
-                        <div className="col-sm-6">
+                        <div className="col-sm-4">
                             <Link to='/thankyou'>
                                 <button className="btn btn-success btn-lg center-block" type="button">Accept!</button>
                             </Link>
                         </div>
-                        <div className="col-sm-6">
+                        <div className="col-sm-4">
                             <button className="btn btn-danger btn-lg center-block" type="button" onClick={this.sendInvites}>Reject!</button>
+                        </div>
+                        <div className="col-sm-4">
+                            <form className="button_to" method="post" action="/users/sign_out"><input type="hidden" name="_method" value="delete" /><input className="btn btn-lg btn-warning" type="submit" value="Log Out!" /></form>
                         </div>
                     </div>
                 </div>

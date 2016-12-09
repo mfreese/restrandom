@@ -3,7 +3,7 @@ before_action :configure_sign_up_params, only: [:create]
 before_action :configure_account_update_params, only: [:update]
 
 # respond_to :json
-# prepend_before_filter :require_no_authentication, :only => [:create ]
+prepend_before_filter :require_no_authentication, :only => [:create ]
 # def create
 #   user = User.new(sign_up_params)
 #   if user.save
@@ -62,9 +62,10 @@ before_action :configure_account_update_params, only: [:update]
   end
 
   # The path used after sign up.
-  # def after_sign_up_path_for(resource)
-  #   super(resource)
-  # end
+  def after_sign_up_path_for(resource)
+    # super(resource)
+    url_for('/criteria')
+  end
 
   # The path used after sign up for inactive accounts.
   # def after_inactive_sign_up_path_for(resource)

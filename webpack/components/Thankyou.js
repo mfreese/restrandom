@@ -16,6 +16,8 @@ const Thankyou = (props) => <div>
             <h3 className="decWhiteAndShadow decCenter">Check your email for which restaurant was picked.</h3>
             <h1 className="decWhiteAndShadow decCenter">Go Eat.</h1>
             <h1 className="decWhiteAndShadow decCenter">Now!</h1>
+            <br /> <br /> <br />
+            <form className="button_to" method="post" action="/users/sign_out"><input type="hidden" name="_method" value="delete" /><input className="btn btn-lg btn-warning center-block" type="submit" value="Log Out!" /></form>
         </div>
     </div>
 </div>
