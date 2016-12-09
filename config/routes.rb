@@ -18,6 +18,8 @@ Rails.application.routes.draw do
       resources :criteria
       post '/search' => 'geo_search#search'
       post 'users/invite' => 'invites#invites'
+      get '/reject/selection' => 'user_group#reject'
+      get '/accept/selection' => 'user_group#accept'
     end
 
     root 'homepage#static'
