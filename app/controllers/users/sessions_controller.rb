@@ -1,6 +1,6 @@
 class Users::SessionsController < Devise::SessionsController
   # respond_to :json
-  # prepend_before_filter :require_no_authentication, :only => [:create ]
+  prepend_before_action :require_no_authentication, :only => [:create ]
   # def create
   #  resource = User.find_for_database_authentication(:email=>params[:user][:email])
   #  if resource.nil?
@@ -31,7 +31,12 @@ class Users::SessionsController < Devise::SessionsController
   #   super
   # end
 
-  # protected
+  protected
+
+  def after_sign_in_path_for(resource)
+    # super(resource)
+    url_for('/criteria')
+  end
 
   # If you have extra params to permit, append them to the sanitizer.
   def configure_sign_in_params

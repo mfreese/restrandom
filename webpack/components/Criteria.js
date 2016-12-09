@@ -12,7 +12,7 @@ class Criteria extends React.Component {
         this.state = {
             friends: [],
             type: 'BU',
-            price: '$',
+            price: 1,
             miles: 5
         }
     }
@@ -30,18 +30,13 @@ class Criteria extends React.Component {
 
         // var emailVar = document.getElementById('emailNumber0').value
 
-        if (this.state.friends.length) {
+        if (!this.state.friends.length) {
             return (
-                fetch()
-                // alert('You have an email address')
-            );
-        } else {
-            return (
-                alert('You need 1 email address')
+                alert('You need at least 1 email address')
             );
         }
 
-        fetch('/api/invites', {
+        fetch('/api/search', {
             method: 'POST',
             credentials: 'same-origin',
             body: JSON.stringify(this.state),
@@ -50,7 +45,7 @@ class Criteria extends React.Component {
             }
         })
         .then(response => response.json())
-        .then(response => browserHistory.push('/thankyou'))
+        .then(response => browserHistory.push('/decision'))
 
     }
 
@@ -78,7 +73,7 @@ class Criteria extends React.Component {
                     </div>
                     <div className="form-group critCenter">
                        <label htmlFor="price">Price {this.state.price}</label>
-                       <input type="range" min="1" max="4" className="form-control" id="price" onChange={(e) => this.setState({price:'$'.repeat(e.target.value)})} value={this.state.price.length} />
+                       <input type="range" min="1" max="4" className="form-control" id="price" onChange={(e) => this.setState({price:e.target.value})} value={this.state.price.length} />
                      </div>
                 </div>
                 <div className="col-sm-4">

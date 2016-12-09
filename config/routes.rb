@@ -2,6 +2,9 @@
 Rails.application.routes.draw do
 
     mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+    devise_scope :user do
+      root to: "users/sessions#new"
+    end
     devise_for :users, controllers: {
         registrations: 'users/registrations',
         sessions: 'users/sessions'
@@ -20,7 +23,7 @@ Rails.application.routes.draw do
       post 'users/invite' => 'invites#invites'
     end
 
-    root 'homepage#static'
+    # root 'devise/sessions#new'
     get '/invite_preview' => 'application#invite_preview'
     # get '/choice' => 'application#static'
     # get '/criteria' => 'application#static'
