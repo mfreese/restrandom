@@ -18,7 +18,7 @@ class GeoSearchController < ApplicationController
       phone: random_business['phone']
     )
     @group = current_user.user_groups.create
-    @invites = params[:invites]
+    @invites = params[:friends]
     if @invites
       @invites.each do |email|
     @group.invites << Invite.new(email: email)
