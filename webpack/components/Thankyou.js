@@ -8,16 +8,18 @@ const Thankyou = (props) => <div>
             <h1 className="decWhiteAndShadow decCenter decFont">Randomizer...</h1>
             <br/>
             <br/>
-            <h1 className="decWhiteAndShadow decCenter">Choice has been made!</h1>
+            <h1 className="decWhiteAndShadow decCenter">Your food choice awaits you!</h1>
         </div>
         <div className="col-sm-3">
             <h1 className="decWhiteAndShadow decCenter">Decision Made!</h1>
             <br />
-            <h3 className="decWhiteAndShadow decCenter">Check your email for which restaurant was picked.</h3>
+            <h3 className="decWhiteAndShadow decCenter">The selection is in your email.  What are you waiting for?</h3>
             <h1 className="decWhiteAndShadow decCenter">Go Eat.</h1>
             <h1 className="decWhiteAndShadow decCenter">Now!</h1>
-            <br /> <br /> <br />
-            <form className="button_to" method="post" action="/users/sign_out"><input type="hidden" name="_method" value="delete" /><input className="btn btn-lg btn-warning center-block" type="submit" value="Log Out!" /></form>
+            <br />
+            <img src="/img/car2.svg" alt="Logo" className="carLogo center-block critMargin" />
+            <br />
+            <form className="button_to" method="post" action="/users/sign_out"><input type="hidden" name="_method" value="delete" /><input className="btn btn-lg btn-danger center-block" type="submit" value="Log Out!" /></form>
         </div>
     </div>
 </div>

@@ -29,6 +29,7 @@ class Decision extends React.Component {
                     <br/>
                     <h1 className="decWhiteAndShadow decCenter">Emails have been sent!</h1>
                     <br/>
+                    <br/>
                     <div className="row">
                         <div className="col-sm-4">
                             <Link to='/thankyou'>
@@ -49,6 +50,7 @@ class Decision extends React.Component {
                     <h3 className="decWhiteAndShadow decCenter">Check your email for which restaurant was picked.</h3>
                     <h3 className="decWhiteAndShadow decCenter">If the restaurante that was picked is not the liking of someone in your party, never fear. You or someone in your party can reject the choice.</h3>
                     <h3 className="decWhiteAndShadow decCenter">But remember you can only reject the selection twice.  3rd time is the charm.</h3>
+                    <img src="/img/chef2.svg" alt="Logo" className="chefLogo center-block critMargin" />
                 </div>
             </div>
         </div>
