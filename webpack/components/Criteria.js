@@ -52,15 +52,19 @@ class Criteria extends React.Component {
     render() {
         return <div>
             <Header />
-            <Friends addEmail={this.addEmail} />
-            <div className="row critBottomGrad">
+            <div className="row grad">
+                <div className="col-sm-12">
+                    <h2 className="fontColorShadowSide">You aren't being judged, pick what you want.</h2>
+                </div>
+            </div>
+            <div className="row">
                 <div className="col-sm-4">
                     <div>
                         <img src="/img/chef2.svg" alt="Logo" className="carLogo center-block critMargin" />
                     </div>
                     <div className="form-group critCenter">
-                        <label htmlFor="type">Type</label>
-                        <select className="form-control" id="type" onChange={(e) => this.setState({type:e.target.value})} value={this.state.type}>
+                        <label className="fontColorShadowSide" htmlFor="type">Type</label>
+                        <select className="form-control fontColorShadowSide" id="type" onChange={(e) => this.setState({type:e.target.value})} value={this.state.type}>
                             <option value="AM">American</option>
                             <option value="PI">Pizza</option>
                             <option value="ME">Mexican</option>
@@ -69,10 +73,10 @@ class Criteria extends React.Component {
                 </div>
                 <div className="col-sm-4">
                     <div>
-                        <img src="/img/dollar2.svg" alt="Logo" className="carLogo center-block critMargin" />
+                        <img src="/img/dollar4.svg" alt="Logo" className="carLogo center-block critMargin" />
                     </div>
                     <div className="form-group critCenter">
-                       <label htmlFor="price">Price {this.state.price}</label>
+                       <label className="fontColorShadowSide" htmlFor="price">Price {this.state.price}</label>
                        <input type="range" min="1" max="4" className="form-control" id="price" onChange={(e) => this.setState({price:e.target.value})} value={this.state.price.length} />
                      </div>
                 </div>
@@ -81,22 +85,17 @@ class Criteria extends React.Component {
                         <img src="/img/car2.svg" alt="Logo" className="carLogo center-block critMargin" />
                     </div>
                     <div className="form-group critCenter">
-                    <label htmlFor="miles">{this.state.miles} Miles Away</label>
+                    <label className="fontColorShadowSide" htmlFor="miles">{this.state.miles} Miles Away</label>
                     <input type="range" min="1" max="15" className="form-control" id="miles" onChange={(e) => this.setState({miles:e.target.value})} value={this.state.miles} />
                      </div>
                 </div>
             </div>
             <div className="row">
-                <div className="col-sm-8">
-                    <button className="btn btn-success btn-lg center-block" type="button" onClick={this.sendInvites}>Send Invites!</button>
-                </div>
-                <div className="col-sm-4">
-                    <form className="button_to" method="post" action="/users/sign_out"><input type="hidden" name="_method" value="delete" /><input className="btn btn-lg btn-danger" type="submit" value="Log Out!" /></form>
-                </div>
+            <hr></hr>
+                <h2 className="fontColorShadowSide">Don't be that person, invite your friends.</h2>
+                <Friends addEmail={this.addEmail} />
+                <button className="btn btn-success btn-lg center-block" type="button" onClick={this.sendInvites}>Send Invites!</button>
             </div>
-            {/* <br /><br /><br /><br /> */}
-            {/* <button className="btn btn-success btn-lg center-block" type="button" onClick={this.sendInvites}>Send Invites!</button> */}
-            {/* <br /><br /><br /><br /> */}
         </div>
     }
 }
