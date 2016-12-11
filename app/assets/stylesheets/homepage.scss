@@ -11,6 +11,35 @@ img {
 
 // <-- Redesign Styles -->
 
+.acceptMain {
+    color: #9BCC5E;
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.6);
+    text-align: center;
+    font-size: 200px;
+}
+
+.acceptBottom {
+    color: #9BCC5E;
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.6);
+    text-align: center;
+    font-size: 64px;
+}
+
+
+.rejectMain {
+    color: #D9534F;
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.6);
+    text-align: center;
+    font-size: 200px;
+}
+
+.rejectBottom {
+    color: #D9534F;
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.6);
+    text-align: center;
+    font-size: 64px;
+}
+
 .fontColorShadowSide {
     color: #279AF1;
     text-shadow: 0px 0px 5px rgba(0,0,0,0.2);
@@ -42,6 +71,20 @@ img {
 
 .imageSu {
     background-image: linear-gradient(rgba(247, 247, 255, 0.3), rgba(255, 255, 255, 0.3)), url('/img/cook.jpg');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.imageReject {
+    background-image: linear-gradient(rgba(247, 247, 255, 0.5), rgba(255, 255, 255, 0.5)), url('/img/decision.jpg');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.imageAccept {
+    background-image: linear-gradient(rgba(247, 247, 255, 0.5), rgba(255, 255, 255, 0.5)), url('/img/fries.jpg');
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
