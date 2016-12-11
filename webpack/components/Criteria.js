@@ -30,11 +30,11 @@ class Criteria extends React.Component {
 
         // var emailVar = document.getElementById('emailNumber0').value
 
-        if (!this.state.friends.length) {
-            return (
-                alert('You need at least 1 email address')
-            );
-        }
+        // if (!this.state.friends.length) {
+        //     return (
+        //         alert('You need at least 1 email address')
+        //     );
+        // }
 
         fetch('/api/search', {
             method: 'POST',
