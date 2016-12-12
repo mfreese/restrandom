@@ -2,16 +2,17 @@ import React from 'react'
 import Header from './Header'
 
 const Thankyou = (props) => <div>
-    <div className="row">
-        <div className="col-sm-12 imageReject">
+    <div className="row imageThanks">
+        <div className="col-sm-12">
             <Header />
-            <br/> <br/> <br/> <br/>
-            <h1 className="rejectMain">Rejected!</h1>
-            <br/> <br/>
-            <h1 className="rejectBottom">Try your luck again!</h1>
         </div>
+        <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/>
+        <h1 className="fontColorShadowMain fontCenter font100">Thank you!</h1>
+        <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/>
+        <h1 className="fontColorShadowCrit fontCenter">You should probably go eat now.</h1>
     </div>
 </div>
+
 
 
 

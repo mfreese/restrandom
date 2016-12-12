@@ -12,7 +12,7 @@ class Criteria extends React.Component {
         this.state = {
             friends: [],
             type: 'BU',
-            price: 1,
+            price: '$',
             miles: 5
         }
     }
@@ -35,11 +35,12 @@ class Criteria extends React.Component {
         //         alert('You need at least 1 email address')
         //     );
         // }
-
+        let state = this.state
+        state.price = state.price.length
         fetch('/api/search', {
             method: 'POST',
             credentials: 'same-origin',
-            body: JSON.stringify(this.state),
+            body: JSON.stringify(state),
             headers: {
                 'content-type': 'application/json'
             }
@@ -68,6 +69,7 @@ class Criteria extends React.Component {
                             <option value="AM">American</option>
                             <option value="PI">Pizza</option>
                             <option value="ME">Mexican</option>
+                            <option value="IT">Italian</option>
                         </select>
                     </div>
                 </div>
@@ -77,7 +79,7 @@ class Criteria extends React.Component {
                     </div>
                     <div className="form-group critCenter">
                        <label className="fontColorShadowSide" htmlFor="price">Price {this.state.price}</label>
-                       <input type="range" min="1" max="4" className="form-control" id="price" onChange={(e) => this.setState({price:e.target.value})} value={this.state.price.length} />
+                       <input type="range" min="1" max="4" className="form-control" id="price" onChange={(e) => this.setState({price:'$'.repeat(e.target.value)})} value={this.state.price.length} />
                      </div>
                 </div>
                 <div className="col-sm-4">
@@ -91,10 +93,12 @@ class Criteria extends React.Component {
                 </div>
             </div>
             <div className="row">
-            <hr></hr>
-                <h2 className="fontColorShadowSide">Don't be that person, invite your friends.</h2>
-                <Friends addEmail={this.addEmail} />
-                <button className="btn btn-success btn-lg center-block" type="button" onClick={this.sendInvites}>Send Invites!</button>
+                <div className="col-sm-12">
+                    <hr></hr>
+                    <h2 className="fontColorShadowSide">Don't be that person, invite your friends.</h2>
+                    <Friends addEmail={this.addEmail} />
+                    <button className="btn btn-lg center-block buttonColor" type="button" onClick={this.sendInvites}>Send Invites!</button>
+                </div>
             </div>
         </div>
     }

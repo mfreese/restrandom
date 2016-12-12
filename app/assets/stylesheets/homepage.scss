@@ -45,7 +45,22 @@ img {
     text-shadow: 0px 0px 5px rgba(0,0,0,0.2);
 }
 
+.fontColorShadowSideCrit {
+    color: #279AF1;
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.6);
+}
+
 .fontColorShadowMain {
+    color: #9BCC5E;
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.6);
+}
+
+.buttonColor {
+    background-color: #9BCC5E;
+    color: #FFFFFF;
+}
+
+.fontColorShadowCrit {
     color: #FFFFFF;
     text-shadow: 0px 0px 5px rgba(0,0,0,0.6);
 }
@@ -63,7 +78,7 @@ img {
 }
 
 .imageLi {
-    background-image: linear-gradient(rgba(247, 247, 255, 0.3), rgba(255, 255, 255, 0.3)), url('/img/pizza.jpg');
+    background-image: linear-gradient(rgba(247, 247, 255, 0.4), rgba(255, 255, 255, 0.4)), url('/img/pizza.jpg');
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
@@ -85,6 +100,20 @@ img {
 
 .imageAccept {
     background-image: linear-gradient(rgba(247, 247, 255, 0.5), rgba(255, 255, 255, 0.5)), url('/img/fries.jpg');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.imageDecision {
+    background-image: linear-gradient(rgba(247, 247, 255, 0.7), rgba(255, 255, 255, 0.7)), url('/img/fooddecision.jpg');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.imageThanks {
+    background-image: linear-gradient(rgba(247, 247, 255, 0.7), rgba(255, 255, 255, 0.7)), url('/img/thanks.jpg');
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;

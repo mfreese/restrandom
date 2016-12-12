@@ -3,6 +3,7 @@ import { Link } from 'react-router'
 import Header from './Header'
 
 
+
 class Decision extends React.Component {
     sendInvites() {
         console.log(this.state)
@@ -22,18 +23,22 @@ class Decision extends React.Component {
     render() {
 
         return <div>
-            <div className="row critTopGrad">
-                <div className="col-sm-12 imageAccept">
+            <div className="row imageDecision">
+                <div className="col-sm-12">
                     <Header />
-                    <br/> <br/> <br/> <br/>
-                    <h1 className="acceptMain">Accepted!</h1>
-                    <br/> <br/>
-                    <h1 className="acceptBottom">Seriously.  Go Eat.  Now!</h1>
                 </div>
+                <br/> <br/>
+                <h1 className="fontColorShadowMain fontCenter font100">Hey you, check your email!</h1>
+                <br/> <br/>
+                <h1 className="fontColorShadowCrit fontCenter">Your random restaurant is awaiting for you to either "Accept" or "Reject".</h1>
+                <br/> <br/>
+                <h1 className="fontColorShadowCrit fontCenter">Remember you can only reject twice.</h1>
+                <h1 className="fontColorShadowCrit fontCenter">Third time is the charm.</h1>
             </div>
         </div>
     }
 }
+
 
 export default Decision
 
