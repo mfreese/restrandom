@@ -5,7 +5,7 @@ after_create :invites
 
 
   def invites
-      UserNotifierMailer.send_signup_email(self).deliver
+      UserNotifierMailer.send_choice_email(self).deliver
   end
 
 

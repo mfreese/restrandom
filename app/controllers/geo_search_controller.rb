@@ -11,13 +11,12 @@ class GeoSearchController < ApplicationController
     parsed = response.parse
     Rails.logger.info parsed.inspect
     random_business = parsed['businesses'].sample
-    user_group = current_user.user_groups.create(
+    @group = current_user.user_groups.create(
       restaurant_name: random_business['name'],
       address: random_business['location']['address1'] + random_business['location']['city'] + random_business['location']['state'] + random_business['location']['zip_code'],
       url: random_business['url'],
       phone: random_business['phone']
     )
-    @group = current_user.user_groups.create
     @invites = params[:friends]
     if @invites
       @invites.each do |email|
@@ -31,7 +30,6 @@ class GeoSearchController < ApplicationController
       @invite.save
       Mailer.new_user_invite(@invite, new_user_registration_path(invite_token: @invite.token)).deliver
     end
-
     render json: random_business
   end
 
