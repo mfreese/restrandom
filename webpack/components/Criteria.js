@@ -70,6 +70,25 @@ class Criteria extends React.Component {
                             <option value="PI">Pizza</option>
                             <option value="ME">Mexican</option>
                             <option value="IT">Italian</option>
+                            <option value="VE">Vegetarian</option>
+                            <option value="SE">Seafood</option>
+                            <option value="ST">Steakhouses</option>
+                            <option value="DE">Delis</option>
+                            <option value="BR">Breakfast</option>
+                            <option value="GA">Gastropubs</option>
+                            <option value="IN">Indian</option>
+                            <option value="FO">Food Truck</option>
+                            <option value="CA">Cafes</option>
+                            <option value="PU">Pubs</option>
+                            <option value="CH">Chinese</option>
+                            <option value="FI">Filipino</option>
+                            <option value="BU">Burgers</option>
+                            <option value="PE">Peruvian</option>
+                            <option value="JA">Japanese</option>
+                            <option value="SU">Sushi Bars</option>
+                            <option value="CJ">Cajun</option>
+                            <option value="TH">Thai</option>
+                            <option value="DS">Dim Sum</option>
                         </select>
                     </div>
                 </div>
