@@ -9,14 +9,155 @@ img {
     width: 100%;
 }
 
-// <-- Test Styles -->
+// <-- Redesign Styles -->
 
-.testRed {
-    background-color: red;
-    height: 100vh;
+.acceptMain {
+    color: #9BCC5E;
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.6);
+    text-align: center;
+    font-size: 200px;
 }
 
-// <-- End Test Styles -->
+.acceptBottom {
+    color: #9BCC5E;
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.6);
+    text-align: center;
+    font-size: 64px;
+}
+
+
+.rejectMain {
+    color: #D9534F;
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.6);
+    text-align: center;
+    font-size: 200px;
+}
+
+.rejectBottom {
+    color: #D9534F;
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.6);
+    text-align: center;
+    font-size: 64px;
+}
+
+.fontColorShadowSide {
+    color: #279AF1;
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+}
+
+.fontColorShadowSideCrit {
+    color: #279AF1;
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.6);
+}
+
+.fontColorShadowMain {
+    color: #9BCC5E;
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.6);
+}
+
+.buttonColor {
+    background-color: #9BCC5E;
+    color: #FFFFFF;
+}
+
+.fontColorShadowCrit {
+    color: #FFFFFF;
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.6);
+}
+
+.fontCenter {
+    text-align: center;
+}
+
+.font100 {
+    font-size: 100px;
+}
+
+.grad {
+    background: linear-gradient(rgba(247, 247, 255, 1), rgba(255, 255, 255, 1));
+}
+
+.imageLi {
+    background-image: linear-gradient(rgba(247, 247, 255, 0.4), rgba(255, 255, 255, 0.4)), url('/img/pizza.jpg');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.imageSu {
+    background-image: linear-gradient(rgba(247, 247, 255, 0.3), rgba(255, 255, 255, 0.3)), url('/img/cook.jpg');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.imageReject {
+    background-image: linear-gradient(rgba(247, 247, 255, 0.5), rgba(255, 255, 255, 0.5)), url('/img/decision.jpg');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.imageRejectTwo {
+    background-image: linear-gradient(rgba(247, 247, 255, 0.5), rgba(255, 255, 255, 0.5)), url('/img/rejecttwo.jpg');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.imageDone {
+    background-image: linear-gradient(rgba(247, 247, 255, 0.5), rgba(255, 255, 255, 0.5)), url('/img/done.jpg');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.imageAccept {
+    background-image: linear-gradient(rgba(247, 247, 255, 0.5), rgba(255, 255, 255, 0.5)), url('/img/fries.jpg');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.imageDecision {
+    background-image: linear-gradient(rgba(247, 247, 255, 0.7), rgba(255, 255, 255, 0.7)), url('/img/fooddecision.jpg');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.imageThanks {
+    background-image: linear-gradient(rgba(247, 247, 255, 0.7), rgba(255, 255, 255, 0.7)), url('/img/thanks.jpg');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.simple_form .hint {
+    display: block;
+    color: #279AF1;
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+}
+
+.topBar {
+    background-color: #9BCC5E;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.fontHead {
+    font-size: 64px;
+    margin-top: 0px;
+}
+
+.loMargin {
+    margin-top: 15px;
+}
+
+
+// <-- End Redesign Styles -->
 
 // <-- Log In Styles -->
 
@@ -52,11 +193,6 @@ img {
 // <-- End Log In Styles -->
 
 // <-- Sign Up Styles -->
-.simple_form .hint {
-    display: block;
-    color: white;
-    text-shadow: 0px 0px 5px rgba(0,0,0,0.5);
-}
 
 .suCenter {
     text-align: center;
@@ -113,7 +249,7 @@ img {
 
 .critImage {
     background-image: linear-gradient(rgba(202, 223, 147, 0.5), rgba(138, 119, 38, 0.5)), url('/img/counter2.jpg');
-    height: 200px;
+    height: 65px;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -131,10 +267,6 @@ img {
     height: 200px;
     width: 200px;
 }
-
-// .critMargin {
-//     margin-top: 0px
-// }
 
 .emailPad {
     padding-top: 10px;
@@ -172,6 +304,11 @@ img {
 }
 
 .decLogo {
+    height: 100px;
+    width: 100px;
+}
+
+.chefLogo {
     height: 100px;
     width: 100px;
 }

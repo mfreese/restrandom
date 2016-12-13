@@ -1,44 +1,39 @@
 <div class="container-fluid">
-    <div class="row suGrad">
-        <div class="col-sm-8 suImage">
+    <div class="row grad">
+        <div class="col-sm-9 imageSu">
+            <br /> <br />
             <div>
-                <img src="../img/logo1.svg" alt="Logo" class="suLogo center-block">
-                <h1 class="suWhiteAndShadow suCenter suFont">Restaurant</h1>
-                <h1 class="suWhiteAndShadow suCenter suFont">Randomizer</h1>
+                <h1 class="fontColorShadowMain fontCenter font100">Restaurant</h1>
+                <h1 class="fontColorShadowMain fontCenter font100">Randomizer</h1>
             </div>
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
+            <br /> <br /> <br /> <br /> <br /> <br /> <br />
             <div>
-                <h1 class="suWhiteAndShadow suCenter">You've made the first step to deciding.</h1>
+                <h1 class="fontColorShadowMain fontCenter">Sign up, show you CAN decide things!</h1>
             </div>
         </div>
 
-        <div class="col-sm-4 suCenter">
-            <h2 class="suWhiteAndShadow">Sign Up</h2>
+        <div class="col-sm-3 fontCenter">
+            <h2 class="fontColorShadowSide">Sign Up</h2>
             <br />
             <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
               <%= f.error_notification %>
 
               <div class="form-inputs">
-                    <h3 class="suWhiteAndShadow">Email</h3>
+                    <h3 class="fontColorShadowSide">Email</h3>
                 <%= f.input :email, required: true, autofocus: true, label: false, placeholder: 'yourname@mail.com' %>
-                    <h3 class="suWhiteAndShadow">Address</h3>
+                    <h3 class="fontColorShadowSide">Address</h3>
                     <div class="form-group">
                         <%= f.input :address, required: true, autofocus: true, label: false, placeholder: 'Street City State Zip' %>
                         </div>
-                    <h3 class="suWhiteAndShadow">Password</h3>
+                    <h3 class="fontColorShadowSide">Password</h3>
                 <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), label: false, placeholder: 'Notpassword' %>
-                    <h3 class="suWhiteAndShadow">Password Again</h3>
+                    <h3 class="fontColorShadowSide">Password Again</h3>
                 <%= f.input :password_confirmation, required: true, label: false, placeholder: 'Notpassword' %>
               </div>
               <br />
               <br />
-              <div class="form-actions suWhiteAndShadow">
-                <%= f.button :submit, "Sign up" %>
+              <div class="form-actions fontColorShadowSide">
+                <%= f.button :submit, "Sign up", class: 'btn btn-outline btn-lg buttonColor' %>
               </div>
             <% end %>
 
