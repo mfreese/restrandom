@@ -6,6 +6,7 @@ import Criteria from './components/Criteria'
 import Thankyou from './components/Thankyou'
 import Decision from './components/Decision'
 import Reject from './components/Reject'
+import Rejecttwo from './components/Rejecttwo'
 import Accept from './components/Accept'
 import Done from './components/Done'
 
@@ -20,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <Route path='/thankyou' component={Thankyou} />
                 <Route path='/decision' component={Decision} />
                 <Route path='/reject' component={Reject} />
+                <Route path='/rejecttwo' component={Rejecttwo} />
                 <Route path='/accept' component={Accept} />
                 <Route path='/done' component={Done} />
             </Router>
