@@ -19,4 +19,5 @@ class UserNotifierMailer < ActionMailer::Base
     mail( :to => @invite.email,
     :subject => ('Your choice has been made!!'))
   end
+
 end
