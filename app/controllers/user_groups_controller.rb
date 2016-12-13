@@ -21,7 +21,6 @@ class UserGroupsController < ApplicationController
 
     def reject
       @group = UserGroup.find(params[:id])
-      new_restaurant
       reject_counter
       render "show"
     end
@@ -30,28 +29,28 @@ class UserGroupsController < ApplicationController
   private
   def reject_counter
     @group.reject_counter += 1
+      new_restaurant
     if @group.reject_counter <= 2
       @group.invites.map{|invite| invite.email}.each do |email|
         @group.invites << Invite.new(email: email)
       end
-    elsif @group.reject_counter == 3
-      @group.each do |email|
-        @group.invites << Invite.new(email: email)
+    elsif @group.reject_counter >= 3
+      @group.invites.each do |invite|
+        UserNotifierMailer.send_final_email(invite).deliver
       end
     end
   end
 
   def new_restaurant
-    term = { term: params[:food],
-             limit: 40,
+    term = { term: @group.search_food,
+             limit: 10,
              categories: 'restaurants',
-             radius: miles_to_meters(params[:radius]),
-             price: params[:price],
+             radius: miles_to_meters(@group.search_radius),
+             price: @group.search_price,
              location: current_user.address }
 
     response = HTTP.auth(ENV['fusion_token']).get('https://api.yelp.com/v3/businesses/search', params: term)
     parsed = response.parse
-    raise(response)
     Rails.logger.info parsed.inspect
     random_business = parsed['businesses'].sample
       @group.update(

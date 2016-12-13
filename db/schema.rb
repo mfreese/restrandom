@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161212225840) do
+ActiveRecord::Schema.define(version: 20161213002605) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -60,6 +60,9 @@ ActiveRecord::Schema.define(version: 20161212225840) do
     t.integer  "user_id"
     t.integer  "reject_counter",  default: 0
     t.integer  "accept_counter",  default: 0
+    t.string   "search_food"
+    t.string   "search_price"
+    t.string   "search_radius"
   end
 
   create_table "users", force: :cascade do |t|

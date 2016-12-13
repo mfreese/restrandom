@@ -1,7 +1,7 @@
 class GeoSearchController < ApplicationController
   def search
     term = { term: params[:food],
-             limit: 40,
+             limit: 10,
              categories: 'restaurants',
              radius: miles_to_meters(params[:radius]),
              price: params[:price],
@@ -15,7 +15,11 @@ class GeoSearchController < ApplicationController
       restaurant_name: random_business['name'],
       address: random_business['location']['address1'] + random_business['location']['city'] + random_business['location']['state'] + random_business['location']['zip_code'],
       url: random_business['url'],
-      phone: random_business['phone']
+      phone: random_business['phone'],
+      search_food: params[:food],
+      search_radius: params[:radius],
+      search_price: params[:price]
+
     )
     @invites = params[:friends]
     if @invites
