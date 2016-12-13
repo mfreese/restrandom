@@ -21,13 +21,13 @@ Rails.application.routes.draw do
       resources :criteria
       post '/search' => 'geo_search#search'
       post 'users/invite' => 'invites#invites'
-      
+
     end
 
     # root 'devise/sessions#new'
     get '/invite_preview' => 'application#invite_preview'
-    get '/reject/selection' => 'user_group#reject', as: :reject_counter
-    get '/accept/selection' => 'user_group#accept', as: :accept
+    get '/reject/selection' => 'user_groups#reject', as: :reject_counter
+    get '/accept/selection' => 'user_groups#accept', as: :accept
     # get '/choice' => 'application#static'
     # get '/criteria' => 'application#static'
     # get '/selection' => 'application#static'

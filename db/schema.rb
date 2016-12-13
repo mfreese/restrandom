@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161212185433) do
+ActiveRecord::Schema.define(version: 20161212225840) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,15 +51,15 @@ ActiveRecord::Schema.define(version: 20161212185433) do
   end
 
   create_table "user_groups", force: :cascade do |t|
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
     t.string   "restaurant_name"
     t.string   "address"
     t.string   "url"
     t.string   "phone"
     t.integer  "user_id"
-    t.integer  "reject_counter"
-    t.integer  "accept_counter"
+    t.integer  "reject_counter",  default: 0
+    t.integer  "accept_counter",  default: 0
   end
 
   create_table "users", force: :cascade do |t|

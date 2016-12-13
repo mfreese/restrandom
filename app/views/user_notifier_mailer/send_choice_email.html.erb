@@ -3,6 +3,6 @@ You need to make a decision
 
 <p>Would you like to go to <%= @invite.user_group.restaurant_name %>?</p>
 
-To ACCEPT this choice CLICK HERE: <%= link_to('accepted', accept_url(token: @invite.token))  %>
+To ACCEPT this choice CLICK HERE: <%= link_to('accepted', accept_url(token: @invite.token, id: @invite.user_group.id))  %>
 
-To REJECT this choice CLICK HERE: <%= link_to('rejected', reject_counter_url(token: @invite.token)) %>
+To REJECT this choice CLICK HERE: <%= link_to('rejected', reject_counter_url(token: @invite.token, id: @invite.user_group.id)) %>

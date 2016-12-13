@@ -11,8 +11,4 @@ class AcceptEmailController < ApplicationController
   end
   end
   end
-
-
-
-
 end
