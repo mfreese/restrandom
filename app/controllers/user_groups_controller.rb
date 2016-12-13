@@ -58,6 +58,7 @@ def accept_counter
       AcceptMailer.accept_email(email, @group).deliver
     end
   end
+end
 
   def new_restaurant
     term = { term: @group.search_food,
