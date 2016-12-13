@@ -55,7 +55,7 @@ def accept_counter
   @group.save
   if @group.accept_counter == @group.invites.count
     @group.invites.map(&:email).each do |email|
-      AcceptMailer.accept_email(email, @group)
+      AcceptMailer.accept_email(email, @group).deliver
     end
   end
 
