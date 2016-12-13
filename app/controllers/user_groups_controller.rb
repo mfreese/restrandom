@@ -1,4 +1,5 @@
 class UserGroupsController < ApplicationController
+
   def create
     @group = UserGroup.new(params_id)
     respond_to do |format|
@@ -30,25 +31,24 @@ class UserGroupsController < ApplicationController
       redirect_to('/rejecttwo')
     end
   end
-end
 
   private
 
-def reject_counter
-  @group.accept_counter = 0
-  @group.reject_counter += 1
-  @group.save
-  new_restaurant
-  if @group.reject_counter <= 1
-    @group.invites.each do |email|
-      email.invites
-    end
-  elsif @group.reject_counter >= 2
-    @group.invites.each do |invite|
-      UserNotifierMailer.send_final_email(invite).deliver
+  def reject_counter
+    @group.accept_counter = 0
+    @group.reject_counter += 1
+    @group.save
+    new_restaurant
+    if @group.reject_counter <= 1
+      @group.invites.each do |email|
+        email.invites
+      end
+    elsif @group.reject_counter >= 2
+      @group.invites.each do |invite|
+        UserNotifierMailer.send_final_email(invite).deliver
+      end
     end
   end
-end
 
 def accept_counter
   @group.accept_counter += 1
@@ -82,4 +82,5 @@ end
   def miles_to_meters(radius)
     radius.to_i * 1609
   end
+
 end
