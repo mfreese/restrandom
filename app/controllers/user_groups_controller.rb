@@ -65,7 +65,7 @@ def accept_counter
              categories: 'restaurants',
              radius: miles_to_meters(@group.search_radius),
              price: @group.search_price,
-             location: current_user.address }
+             location: @group.user.address }
 
     response = HTTP.auth(ENV['fusion_token']).get('https://api.yelp.com/v3/businesses/search', params: term)
     parsed = response.parse
