@@ -7,6 +7,7 @@ import Thankyou from './components/Thankyou'
 import Decision from './components/Decision'
 import Reject from './components/Reject'
 import Accept from './components/Accept'
+import Done from './components/Done'
 
 // Only needed when you load scripts in head tag
 document.addEventListener('DOMContentLoaded', function() {
@@ -20,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <Route path='/decision' component={Decision} />
                 <Route path='/reject' component={Reject} />
                 <Route path='/accept' component={Accept} />
+                <Route path='/done' component={Done} />
             </Router>
             ,document.getElementById('app')
         )
