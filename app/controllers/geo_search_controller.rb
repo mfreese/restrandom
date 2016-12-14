@@ -19,8 +19,8 @@ class GeoSearchController < ApplicationController
       search_food: params[:food],
       search_radius: params[:radius],
       search_price: params[:price]
-
     )
+    
     @invites = params[:friends]
     if @invites
       @invites.each do |email|

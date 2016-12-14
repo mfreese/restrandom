@@ -31,9 +31,15 @@ prepend_before_filter :require_no_authentication, :only => [:create ]
   # end
 
   # PUT /resource
-  # def update
-  #   super
-  # end
+  def update
+    user = User.find(params[:id])
+    if user.update(update_params)
+      render json: user
+    else
+      warden.custom_failure!
+     render json: user.errors, status: 422
+   end
+  end
 
   # DELETE /resource
   # def destroy
