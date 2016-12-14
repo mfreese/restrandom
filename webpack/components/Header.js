@@ -6,7 +6,7 @@ const Header = (props) => <div className="row">
             {/* <h1 className="fontHead">Restaurant Randomizer</h1> */}
     </div>
     <div className="col-sm-2 topBar">
-        <form className="button_to" method="post" action="/users/sign_out"><input type="hidden" name="_method" value="delete" /><input className="btn btn-md btn-info loButton loMargin" type="submit" value="Update!" /></form>
+        <a  className="btn btn-md buttonUpdate loButton loMargin" href="/users/edit">Profile!</a>
     </div>
     <div className="col-sm-2 topBar">
         <form className="button_to" method="post" action="/users/sign_out"><input type="hidden" name="_method" value="delete" /><input className="btn btn-md btn-danger loButton loMargin" type="submit" value="Log Out!" /></form>
