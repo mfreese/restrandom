@@ -13,7 +13,7 @@ class GeoSearchController < ApplicationController
     random_business = parsed['businesses'].sample
     @group = current_user.user_groups.create(
       restaurant_name: random_business['name'],
-      address: random_business['location']['address1'] + random_business['location']['city'] + random_business['location']['state'] + random_business['location']['zip_code'],
+      address: random_business['location']['address1'] + ", " + random_business['location']['city'] + ", " + random_business['location']['state'] + ", " + random_business['location']['zip_code'],
       url: random_business['url'],
       phone: random_business['phone'],
       search_food: params[:food],
