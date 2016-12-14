@@ -32,7 +32,13 @@ prepend_before_filter :require_no_authentication, :only => [:create ]
 
   # PUT /resource
   # def update
-  #   super
+  #   user = User.find_by(authentication_token: params[:user_token])
+  #   if user.update_without_password(accout_update_params.reject { |a, b| b.blank?})
+  #     render json: user
+  #   else
+  #     warden.custom_failure!
+  #    render json: user.errors.full_messages, status: 422
+  #   end
   # end
 
   # DELETE /resource
@@ -49,7 +55,7 @@ prepend_before_filter :require_no_authentication, :only => [:create ]
   #   super
   # end
 
-  # protected
+  protected
 
   # If you have extra params to permit, append them to the sanitizer.
   def configure_sign_up_params
@@ -64,6 +70,14 @@ prepend_before_filter :require_no_authentication, :only => [:create ]
   # The path used after sign up.
   def after_sign_up_path_for(resource)
     # super(resource)
+    url_for('/criteria')
+  end
+
+  def update_resource(resource, params)
+    resource.update_without_password(params)
+  end
+
+  def after_update_path_for(resource)
     url_for('/criteria')
   end
 

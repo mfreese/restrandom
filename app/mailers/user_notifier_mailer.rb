@@ -1,5 +1,5 @@
 class UserNotifierMailer < ActionMailer::Base
-  default :from => 'Team@RestaurantRandomizer.com'
+  default :from => 'RestaurantRandomizer.com'
 
   def send_signup_email(user)
     @user = user
@@ -9,6 +9,7 @@ class UserNotifierMailer < ActionMailer::Base
 
   def send_choice_email(invite)
     @invite = invite
+    @group = invite.user_group
     mail( :to => @invite.email,
     :subject => ('You have been given a choice'))
   end
