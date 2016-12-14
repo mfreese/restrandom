@@ -32,7 +32,7 @@ prepend_before_filter :require_no_authentication, :only => [:create ]
 
   # PUT /resource
   def update
-    user = User.find_by(authentication_token params[:user_token])
+    user = User.find_by(authentication_token: params[:user_token])
     if user.update_without_password(accout_update_params.reject { |a, b| b.blank?})
       render json: user
     else
