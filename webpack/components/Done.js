@@ -8,8 +8,8 @@ const Done = (props) => <div>
             <br/> <br/> <br/> <br/>
             <h1 className="acceptMain">Done!</h1>
             <br/> <br/>
-            <h1 className="acceptBottom">Thats it! 3rd times the charm.</h1>
-            <h1 className="acceptBottom">Check your email for your final selection.</h1>
+            <h1 className="doneBottom">Thats it! 3rd times the charm.</h1>
+            <h1 className="doneBottom">Check your email for your final selection.</h1>
         </div>
     </div>
 </div>

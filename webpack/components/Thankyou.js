@@ -6,7 +6,7 @@ const Thankyou = (props) => <div>
         <div className="col-sm-12">
             <Header />
         </div>
-        <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/>
+        {/* <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> */}
         <h1 className="fontColorShadowMain fontCenter font100">Thank you!</h1>
         <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/>
         <h1 className="fontColorShadowCrit fontCenter">You should probably go eat, you do look hungry.</h1>
