@@ -32,13 +32,13 @@ prepend_before_filter :require_no_authentication, :only => [:create ]
 
   # PUT /resource
   def update
-    user = User.find(params[:id])
-    if user.update(update_params)
+    user = User.find_by(authentication_token params[:user_token])
+    if user.update_without_password(accout_update_params.reject { |a, b| b.blank?})
       render json: user
     else
       warden.custom_failure!
      render json: user.errors, status: 422
-   end
+    end
   end
 
   # DELETE /resource
