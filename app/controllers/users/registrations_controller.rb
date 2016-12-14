@@ -37,7 +37,8 @@ prepend_before_filter :require_no_authentication, :only => [:create ]
       render json: user
     else
       warden.custom_failure!
-     render json: user.errors, status: 422
+      puts user.errors.full messages
+     render json: user.errors.full_messages, status: 422
     end
   end
 
