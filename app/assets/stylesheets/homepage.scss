@@ -10,39 +10,77 @@ img {
 }
 
 // <-- Redesign Styles -->
+.liR {
+    text-align: center;
+    font-size: 40px;
+    color: #9BCC5E;
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.6);
+}
+
+.liSmall {
+    text-align: center;
+    font-size: 20px;
+    color: #9BCC5E;
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.6);
+    margin-top: 70px;
+}
+
+.suSmall {
+    text-align: center;
+    font-size: 20px;
+    color: #9BCC5E;
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.6);
+    margin-top: 150px;
+}
+
+.loButton {
+    margin-left: 105px;
+}
 
 .acceptMain {
     color: #9BCC5E;
     text-shadow: 0px 0px 5px rgba(0,0,0,0.6);
     text-align: center;
-    font-size: 200px;
+    font-size: 60px;
 }
 
 .acceptBottom {
     color: #9BCC5E;
     text-shadow: 0px 0px 5px rgba(0,0,0,0.6);
     text-align: center;
-    font-size: 64px;
+    font-size: 40px;
 }
 
+.doneBottom {
+    color: #9BCC5E;
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.6);
+    text-align: center;
+    font-size: 32px;
+}
 
 .rejectMain {
     color: #D9534F;
     text-shadow: 0px 0px 5px rgba(0,0,0,0.6);
     text-align: center;
-    font-size: 200px;
+    font-size: 60px;
 }
 
 .rejectBottom {
     color: #D9534F;
     text-shadow: 0px 0px 5px rgba(0,0,0,0.6);
     text-align: center;
-    font-size: 64px;
+    font-size: 30px;
 }
 
 .fontColorShadowSide {
     color: #279AF1;
     text-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+}
+
+.fontCrit {
+    color: #279AF1;
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+    font-size: 14px;
 }
 
 .fontColorShadowSideCrit {
@@ -60,6 +98,11 @@ img {
     color: #FFFFFF;
 }
 
+.homeButtonColor {
+    background-color: #FFFFFF;
+    color: #9BCC5E;
+}
+
 .fontColorShadowCrit {
     color: #FFFFFF;
     text-shadow: 0px 0px 5px rgba(0,0,0,0.6);
@@ -73,13 +116,19 @@ img {
     font-size: 100px;
 }
 
-.grad {
-    background: linear-gradient(rgba(247, 247, 255, 1), rgba(255, 255, 255, 1));
+// .grad {
+//     background: linear-gradient(rgba(247, 247, 255, 1), rgba(255, 255, 255, 1));
+// }
+
+.grad1 {
+    background-color: #CFCBCA;
 }
 
 .imageLi {
     background-image: linear-gradient(rgba(247, 247, 255, 0.4), rgba(255, 255, 255, 0.4)), url('/img/pizza.jpg');
     height: 100vh;
+    // height: 200px;
+    // width: 320px;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -142,18 +191,18 @@ img {
 
 .topBar {
     background-color: #9BCC5E;
-    height: 70px;
+    height: 40px;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .fontHead {
-    font-size: 64px;
-    margin-top: 0px;
+    font-size: 27px;
+    margin-left: 5px;
 }
 
 .loMargin {
-    margin-top: 15px;
+    margin-top: 3px;
 }
 
 
@@ -312,6 +361,91 @@ img {
     height: 100px;
     width: 100px;
 }
+
+
+@media only screen and (min-width: 768px) {
+    .acceptMain {
+        font-size: 180px;
+    }
+    .fontHead {
+        font-size: 64px;
+        // margin-top: 0px;
+    }
+    .acceptBottom {
+        color: #9BCC5E;
+        text-shadow: 0px 0px 5px rgba(0,0,0,0.6);
+        text-align: center;
+        font-size: 64px;
+    }
+    .doneBottom {
+        color: #9BCC5E;
+        text-shadow: 0px 0px 5px rgba(0,0,0,0.6);
+        text-align: center;
+        font-size: 64px;
+    }
+    .topBar {
+        background-color: #9BCC5E;
+        height: 90px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .rejectMain {
+        color: #D9534F;
+        text-shadow: 0px 0px 5px rgba(0,0,0,0.6);
+        text-align: center;
+        font-size: 180px;
+    }
+    .rejectBottom {
+        color: #D9534F;
+        text-shadow: 0px 0px 5px rgba(0,0,0,0.6);
+        text-align: center;
+        font-size: 64px;
+    }
+    .loMargin {
+        margin-top: 30px;
+    }
+    .loButton {
+        right: auto;
+    }
+    .fontColorShadowSide {
+        color: #279AF1;
+        text-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+    }
+    .liR {
+        text-align: center;
+        font-size: 100px;
+        color: #9BCC5E;
+        text-shadow: 0px 0px 5px rgba(0,0,0,0.6);
+    }
+    .liSmall {
+        text-align: center;
+        font-size: 40px;
+        color: #9BCC5E;
+        text-shadow: 0px 0px 5px rgba(0,0,0,0.6);
+        margin-top: 120px;
+    }
+    .suSmall {
+        text-align: center;
+        font-size: 40px;
+        color: #9BCC5E;
+        text-shadow: 0px 0px 5px rgba(0,0,0,0.6);
+        margin-top: 170px;
+    }
+    .imageLi {
+        background-image: linear-gradient(rgba(247, 247, 255, 0.4), rgba(255, 255, 255, 0.4)), url('/img/pizza.jpg');
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .fontCrit {
+        color: #279AF1;
+        text-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+        font-size: 24px;
+    }
+
+
+}
+
 
 // <-- End Decision Styles -->
 

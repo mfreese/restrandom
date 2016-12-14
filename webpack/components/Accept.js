@@ -23,7 +23,7 @@ class Accept extends React.Component {
 
         return <div>
             <div className="row critTopGrad">
-                <div className="col-sm-12 imageAccept">
+                <div className="col-xs-12 imageAccept">
                     <Header />
                     <br/> <br/> <br/> <br/>
                     <h1 className="acceptMain">Accepted!</h1>
