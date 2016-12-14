@@ -9,6 +9,7 @@ class UserNotifierMailer < ActionMailer::Base
 
   def send_choice_email(invite)
     @invite = invite
+    @group = invite.user_group
     mail( :to => @invite.email,
     :subject => ('You have been given a choice'))
   end
