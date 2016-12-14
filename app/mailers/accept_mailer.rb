@@ -1,5 +1,5 @@
 class AcceptMailer < ActionMailer::Base
-  default :from => 'Team@RestaurantRandomizer.com'
+  default :from => 'RestaurantRandomizer.com'
 
   def accept_email(email, user_group)
     @email = email
