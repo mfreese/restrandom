@@ -30,11 +30,11 @@ class Criteria extends React.Component {
 
         // var emailVar = document.getElementById('emailNumber0').value
 
-        // if (!this.state.friends.length) {
-        //     return (
-        //         alert('You need at least 1 email address')
-        //     );
-        // }
+        if (!this.state.friends.length) {
+            return (
+                alert('You need at least 1 email address')
+            );
+        }
         let state = this.state
         state.price = state.price.length
         fetch('/api/search', {
@@ -55,7 +55,7 @@ class Criteria extends React.Component {
             <Header />
             <div className="row grad">
                 <div className="col-sm-12">
-                    <h2 className="fontColorShadowSide">You aren't being judged, pick what you want.</h2>
+                    <h2 className="fontCrit">You aren't being judged, pick what you want.</h2>
                 </div>
             </div>
             <div className="row">
@@ -136,7 +136,7 @@ class Criteria extends React.Component {
             <div className="row">
                 <div className="col-sm-12">
                     <hr></hr>
-                    <h2 className="fontColorShadowSide">Don't be that person, invite your friends.</h2>
+                    <h2 className="fontCrit">Don't be that person, invite your friends.</h2>
                     <Friends addEmail={this.addEmail} />
                     <button className="btn btn-lg center-block buttonColor" type="button" onClick={this.sendInvites}>Send Invites!</button>
                 </div>
