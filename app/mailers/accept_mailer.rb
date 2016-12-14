@@ -3,7 +3,7 @@ class AcceptMailer < ActionMailer::Base
 
   def accept_email(email, user_group)
     @email = email
-    @user_group = user_group
+    @group = user_group
     mail( :to => @email,
     :subject => ('Your choice has been Accepted!'))
   end
